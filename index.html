@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusKart - College Shopping</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    :root {
+      --bg: #fff7f3;
+      --card: rgba(255,255,255,0.92);
+      --primary: #b91c1c;
+      --primary-dark: #7f1d1d;
+      --secondary: #fca5a5;
+      --text: #0f172a;
+      --muted: #475569;
+    }
+
+    body {
+      background: #fff5f5;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    nav {
+      background: #4c0519 !important;
+      box-shadow: none;
+    }
+
+    nav a {
+      letter-spacing: 0.02em;
+      transition: color 0.2s ease;
+    }
+
+    section.bg-red-600 {
+      position: relative;
+      overflow: hidden;
+      background: #dc2626;
+      border-radius: 1.5rem;
+      margin: 1.5rem 1.5rem 0;
+      box-shadow: none;
+    }
+
+    section.bg-red-600 > div:first-child {
+      position: relative;
+      z-index: 1;
+    }
+
+    section.bg-red-600 img {
+      border: none;
+      box-shadow: none;
+      background: transparent;
+    }
+
+    .bg-white {
+      background: #ffffff !important;
+      backdrop-filter: none;
+      border: 1px solid rgba(148, 163, 184, 0.15);
+    }
+
+    .shadow,
+    .shadow-lg,
+    .hover\:shadow-xl {
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+    }
+
+    #products > div {
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+
+    #products > div:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 35px rgba(127, 29, 29, 0.12);
+      border-color: rgba(185, 28, 28, 0.3);
+    }
+
+    #products img {
+      height: 220px;
+      object-fit: cover;
+      border-radius: 0.9rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      background: linear-gradient(180deg, rgba(69, 10, 10, 0.96), rgba(42, 7, 7, 0.98)) !important;
+    }
+
+    @media (max-width: 768px) {
+      section.bg-red-600 {
+        margin: 1rem 1rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-red-50 text-slate-900">
+
+  <!-- Navbar -->
+  <nav class="bg-red-950 text-white px-6 py-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">
+      Campus<span class="text-red-400">Kart</span>
+    </h1>
+
+    <div class="flex gap-6">
+      <a href="#products" class="hover:text-red-300">Shop</a>
+      <a href="#cart" class="hover:text-red-300">Cart (0)</a>
+    </div>
+  </nav>
+
+  <!-- Sale Banner -->
+  <section class="bg-red-600 text-white px-6 py-12 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8">
+
+    <div>
+      <h2 class="text-4xl font-bold">College Sale</h2>
+
+      <p class="mt-3 text-red-100">
+        Up to 50% off on bags, books and more!
+      </p>
+
+      <a href="#products"
+         class="inline-block mt-6 bg-white text-red-950 px-6 py-3 rounded-lg font-bold hover:bg-red-100">
+        Shop Now
+      </a>
+    </div>
+
+    <img
+      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+      alt="College Sale"
+      class="w-64 rounded-xl shadow-lg">
+  </section>
+
+  <!-- Shopping Benefits -->
+  <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 px-6 py-8 text-center">
+
+    <div class="bg-white p-5 rounded-lg shadow">
+      <p class="text-2xl font-bold text-red-600">Free</p>
+      <p class="text-slate-500">Delivery</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-lg shadow">
+      <p class="text-2xl font-bold text-red-600">7-Day</p>
+      <p class="text-slate-500">Returns</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-lg shadow">
+      <p class="text-2xl font-bold text-red-600">COD</p>
+      <p class="text-slate-500">Available</p>
+    </div>
+
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="px-6 py-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+    <!-- Product 1 -->
+    <div class="bg-white p-4 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
+           alt="Backpack" class="w-full rounded-lg">
+      <h3 class="font-bold mt-3">Backpack</h3>
+      <p class="mt-2 font-semibold">Rs. 799
+        <span class="text-slate-400 line-through text-sm">1299</span>
+      </p>
+      <button class="w-full bg-red-600 text-white py-2 mt-3 rounded-lg hover:bg-red-700">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="bg-white p-4 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+      <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=80"
+           alt="Notebooks" class="w-full rounded-lg">
+      <h3 class="font-bold mt-3">Notebook Set</h3>
+      <p class="mt-2 font-semibold">Rs. 199
+        <span class="text-slate-400 line-through text-sm">299</span>
+      </p>
+      <button class="w-full bg-red-600 text-white py-2 mt-3 rounded-lg hover:bg-red-700">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="bg-white p-4 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+      <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=700&q=80"
+           alt="Water Bottle" class="w-full rounded-lg">
+      <h3 class="font-bold mt-3">Water Bottle</h3>
+      <p class="mt-2 font-semibold">Rs. 349
+        <span class="text-slate-400 line-through text-sm">499</span>
+      </p>
+      <button class="w-full bg-red-600 text-white py-2 mt-3 rounded-lg hover:bg-red-700">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="bg-white p-4 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+      <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=700&q=80"
+           alt="Earphones" class="w-full rounded-lg">
+      <h3 class="font-bold mt-3">Earphones</h3>
+      <p class="mt-2 font-semibold">Rs. 599
+        <span class="text-slate-400 line-through text-sm">999</span>
+      </p>
+      <button class="w-full bg-red-600 text-white py-2 mt-3 rounded-lg hover:bg-red-700">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="bg-white p-4 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+      <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=700&q=80"
+           alt="Hoodie" class="w-full rounded-lg">
+      <h3 class="font-bold mt-3">College Hoodie</h3>
+      <p class="mt-2 font-semibold">Rs. 899
+        <span class="text-slate-400 line-through text-sm">1499</span>
+      </p>
+      <button class="w-full bg-red-600 text-white py-2 mt-3 rounded-lg hover:bg-red-700">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="bg-white p-4 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+      <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=700&q=80"
+           alt="Calculator" class="w-full rounded-lg">
+      <h3 class="font-bold mt-3">Scientific Calculator</h3>
+      <p class="mt-2 font-semibold">Rs. 499
+        <span class="text-slate-400 line-through text-sm">699</span>
+      </p>
+      <button class="w-full bg-red-600 text-white py-2 mt-3 rounded-lg hover:bg-red-700">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 7 -->
+    <div class="bg-white p-4 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+      <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80"
+           alt="Lunch Box" class="w-full rounded-lg">
+      <h3 class="font-bold mt-3">Lunch Box</h3>
+      <p class="mt-2 font-semibold">Rs. 299
+        <span class="text-slate-400 line-through text-sm">449</span>
+      </p>
+      <button class="w-full bg-red-600 text-white py-2 mt-3 rounded-lg hover:bg-red-700">
+        Add to Cart
+      </button>
+    </div>
+
+    <!-- Product 8 -->
+    <div class="bg-white p-4 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80"
+           alt="Desk Lamp" class="w-full rounded-lg">
+      <h3 class="font-bold mt-3">Study Lamp</h3>
+      <p class="mt-2 font-semibold">Rs. 399
+        <span class="text-slate-400 line-through text-sm">599</span>
+      </p>
+      <button class="w-full bg-red-600 text-white py-2 mt-3 rounded-lg hover:bg-red-700">
+        Add to Cart
+      </button>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-red-950 text-red-100 py-6 text-center">
+    <p>&copy; 2026 CampusKart</p>
+
+    <div class="flex justify-center gap-6 mt-3">
+      <a href="#" class="hover:text-white">About</a>
+      <a href="#" class="hover:text-white">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
